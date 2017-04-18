@@ -23,4 +23,4 @@ $(call inherit-product, device/xiaomi/msm8937-common/msm8937.mk)
 include $(DEVICE_PATH)/product/*.mk
 
 # Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/santoni/santoni-vendor.mk)
+$(call inherit-product, vendor/xiaomi/santoni/santoni-vendor.mk)

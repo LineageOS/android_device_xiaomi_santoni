@@ -24,4 +24,4 @@ DEVICE_PATH := device/xiaomi/santoni
 include $(DEVICE_PATH)/board/*.mk
 
 # Inherit the proprietary files
--include vendor/xiaomi/santoni/BoardConfigVendor.mk
+include vendor/xiaomi/santoni/BoardConfigVendor.mk
