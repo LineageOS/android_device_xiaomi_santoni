@@ -1,0 +1,1 @@
+allow system_server baseband_prop:file read;
