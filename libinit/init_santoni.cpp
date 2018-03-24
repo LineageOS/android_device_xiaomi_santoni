@@ -33,20 +33,23 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <android-base/file.h>
+#include <android-base/properties.h>
+
 #include "init_msm8937.h"
 
 #include "vendor_init.h"
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
 
+using android::base::GetProperty;
+using android::init::property_set;
 
 void init_target_properties()
 {
     std::ifstream fin;
     std::string buf;
 
-    std::string product = property_get("ro.product.name");
+    std::string product = GetProperty("ro.product.name", "");
     if (product.find("santoni") == std::string::npos)
         return;
 
