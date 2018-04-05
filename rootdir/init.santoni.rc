@@ -28,7 +28,7 @@
 on boot
     start baseband-sh
 
-service baseband-sh /system/bin/sh /system/etc/set_baseband.sh
+service baseband-sh /vendor/bin/sh /vendor/etc/set_baseband.sh
     class late_start
     user root
     oneshot
