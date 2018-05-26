@@ -35,11 +35,11 @@ etc/firmware/rampatch_tlv_3.2.tlv:vendor/firmware/rampatch_tlv_3.2.tlv
 
 # Camera - from santoni
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
-etc/camera/camera_config.xml
-etc/camera/ov5675_ofilm_chromatix.xml
-etc/camera/ov13855_sunny_chromatix.xml
-etc/camera/s5k3l8_ofilm_chromatix.xml
-etc/camera/s5k5e8_sunny_chromatix.xml
+etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml
+etc/camera/ov5675_ofilm_chromatix.xml:vendor/etc/camera/ov5675_ofilm_chromatix.xml
+etc/camera/ov13855_sunny_chromatix.xml:vendor/etc/camera/ov13855_sunny_chromatix.xml
+etc/camera/s5k3l8_ofilm_chromatix.xml:vendor/etc/camera/s5k3l8_ofilm_chromatix.xml
+etc/camera/s5k5e8_sunny_chromatix.xml:vendor/etc/camera/s5k5e8_sunny_chromatix.xml
 
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
@@ -134,7 +134,7 @@ vendor/lib/libmmcamera2_mct_shimlayer.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so|2899d18dca2d4af7a0b1e23c9f7d627fe3acd939
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
 
