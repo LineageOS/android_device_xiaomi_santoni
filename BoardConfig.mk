@@ -20,8 +20,20 @@ DEVICE_PATH := device/xiaomi/santoni
 # inherit from common msm8937-common
 -include device/xiaomi/msm8937-common/BoardConfigCommon.mk
 
-# Inherit device-specific board fragments
-include $(DEVICE_PATH)/board/*.mk
+# Camera
+USE_DEVICE_SPECIFIC_CAMERA := true
+BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_TS_MAKEUP := true
+
+# Kernel
+TARGET_KERNEL_CONFIG := lineageos_santoni_defconfig
+
+# Libinit
+TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(DEVICE_PATH)/libinit/init_santoni.cpp
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy
 
 # Inherit the proprietary files
 include vendor/xiaomi/santoni/BoardConfigVendor.mk

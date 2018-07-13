@@ -19,8 +19,24 @@ DEVICE_PATH := $(LOCAL_PATH)
 # Inherit from msm8937-common
 $(call inherit-product, device/xiaomi/msm8937-common/msm8937.mk)
 
-# Include device-specific product fragments
-include $(DEVICE_PATH)/product/*.mk
+# Audio
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(DEVICE_PATH)/audio/mixer_paths_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_sku1.xml
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8937 \
+    libmm-qcamera
+
+# Init scripts
+PRODUCT_PACKAGES += \
+    init.santoni.rc \
+    set_baseband.sh
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/keylayout/msm8940-sku6-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/msm8940-sku6-snd-card_Button_Jack.kl
 
 # Inherit proprietary files
 $(call inherit-product, vendor/xiaomi/santoni/santoni-vendor.mk)
