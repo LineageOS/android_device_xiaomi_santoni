@@ -31,6 +31,9 @@ TARGET_KERNEL_CONFIG := lineageos_santoni_defconfig
 # Libinit
 TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(DEVICE_PATH)/libinit/init_santoni.cpp
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2018-06-01
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
