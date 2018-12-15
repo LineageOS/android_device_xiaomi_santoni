@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on boot
+on property:sys.boot_completed=1
     start baseband-sh
 
 service baseband-sh /vendor/bin/sh /vendor/etc/set_baseband.sh
