@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-18 The LineageOS Project
+# Copyright (C) 2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,9 +18,11 @@
 
 set -e
 
+# Required!
 export DEVICE=santoni
-export VENDOR=xiaomi
-export INITIAL_COPYRIGHT_YEAR=2018
 export DEVICE_COMMON=msm8937-common
+export VENDOR=xiaomi
 
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+export DEVICE_BRINGUP_YEAR=2018
+
+"./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
