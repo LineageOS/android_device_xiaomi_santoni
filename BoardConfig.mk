@@ -35,8 +35,8 @@ TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(DEVICE_PATH)/libinit/init_santoni.cpp
 VENDOR_SECURITY_PATCH := 2018-06-01
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    $(DEVICE_PATH)/sepolicy
 
 # Inherit the proprietary files
 include vendor/xiaomi/santoni/BoardConfigVendor.mk
