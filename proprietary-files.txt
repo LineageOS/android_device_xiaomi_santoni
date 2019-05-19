@@ -34,7 +34,7 @@ etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
 etc/firmware/rampatch_tlv_3.2.tlv:vendor/firmware/rampatch_tlv_3.2.tlv
 
 # Camera - from santoni
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|a4de8856217b0d3f0296fbb5f07bcb07b1d5ad0e
 etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml
 etc/camera/ov5675_ofilm_chromatix.xml:vendor/etc/camera/ov5675_ofilm_chromatix.xml
 etc/camera/ov13855_sunny_chromatix.xml:vendor/etc/camera/ov13855_sunny_chromatix.xml
