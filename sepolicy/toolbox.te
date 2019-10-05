@@ -4,5 +4,3 @@ allow toolbox property_socket:sock_file write;
 allow toolbox init:unix_stream_socket connectto;
 
 allow toolbox firmware_file:file { open read getattr };
-
-allow toolbox toolbox:capability dac_override;

@@ -30,6 +30,6 @@ on property:sys.boot_completed=1
 
 service baseband-sh /vendor/bin/sh /vendor/etc/set_baseband.sh
     class late_start
-    user root
+    user system
     oneshot
     disabled
